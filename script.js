@@ -18,7 +18,7 @@ document.getElementById('decisionForm').addEventListener('submit', async functio
     };
   
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbzjmZpJVqGUC1zinPSbW1Tj8a7UWcnEia8xIiSBk8zEGZS2lyP6i-7W1xY3L6BKyxka/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbw6npbun6OGrOWcm1Pi8ii5QUaM4AhbKPnlZ3STJA3YM5qLm60nP2BMz1a3oDZwxgEs/exec', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
