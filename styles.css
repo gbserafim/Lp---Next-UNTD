@@ -9,10 +9,11 @@ body {
     align-items: center;
     height: 100vh;
     color: #fff;
-  }
-  
-  /* Container principal */
-  .container {
+    overflow: hidden; /* Evitar rolagem vertical em dispositivos pequenos */
+}
+
+/* Container principal */
+.container {
     width: 90%;
     max-width: 1200px;
     background: #2c2c2c;
@@ -21,85 +22,116 @@ body {
     border-radius: 10px;
     text-align: center;
     overflow-y: auto;
-  }
-  
-  /* Título */
-  h1 {
-    font-size: 32px;
+}
+
+/* Título */
+h1 {
+    font-size: 2rem; /* Usando rem para melhor escalabilidade */
     margin-bottom: 20px;
     color: #fff;
-  }
-  
-  /* Logo */
-  .logo {
+}
+
+/* Logo */
+.logo {
     display: block;
     margin: 0 auto 20px;
     max-width: 200px;
     height: auto;
-  }
-  
-  /* Grid de formulário */
-  .form-grid {
+}
+
+/* Grid de formulário */
+.form-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
-  /* Grupo de formulário */
-  .form-group {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajuste do minmax para telas menores */
+    gap: 15px;
+}
+
+/* Grupo de formulário */
+.form-group {
     text-align: left;
-  }
-  
-  /* Labels */
-  label {
-    font-size: 14px;
+}
+
+/* Labels */
+label {
+    font-size: 1rem; /* Ajustando o tamanho para melhor visualização */
     color: #ddd;
     display: block;
     margin-bottom: 5px;
-  }
-  
-  /* Campos de entrada */
-  input, select, textarea {
+}
+
+/* Campos de entrada */
+input, select, textarea {
     width: 100%;
-    padding: 10px;
-    font-size: 14px;
+    padding: 12px; /* Aumentando o padding para áreas de toque mais confortáveis */
+    font-size: 1rem; /* Ajustando o tamanho da fonte */
     border: 1px solid #444;
     border-radius: 5px;
     background: #333;
     color: #fff;
     box-sizing: border-box;
-  }
-  
-  /* Textarea */
-  textarea {
+}
+
+/* Textarea */
+textarea {
     resize: none;
-    height: 80px;
-  }
-  
-  /* Botão */
-  button {
+    height: 100px; /* Aumentando a altura para uma melhor visualização */
+}
+
+/* Botão */
+button {
     background-color: #444;
     color: #fff;
     padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem; /* Ajustando o tamanho da fonte */
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-  }
-  
-  /* Botão hover */
-  button:hover {
+    width: 100%; /* Para garantir que o botão ocupe toda a largura em telas pequenas */
+}
+
+/* Botão hover */
+button:hover {
     background-color: #666;
-  }
-  
-  /* Mensagem de resposta */
-  .response-message {
+}
+
+/* Mensagem de resposta */
+.response-message {
     margin-top: 15px;
-    font-size: 14px;
+    font-size: 1rem; /* Ajustando a fonte */
     color: #28a745;
-  }
-  
+}
+
+/* Media Queries para dispositivos menores */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Reduzindo o padding para otimizar o espaço em telas menores */
+    }
+
+    .container {
+        padding: 20px; /* Ajustando o padding no container */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduzindo o tamanho da fonte no título */
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr; /* Fazendo o formulário se organizar em uma única coluna em dispositivos pequenos */
+    }
+
+    .form-group {
+        text-align: left;
+    }
+
+    input, select, textarea {
+        font-size: 1rem; /* Ajustando o tamanho das fontes para telas pequenas */
+    }
+
+    button {
+        width: 100%; /* Garantindo que o botão ocupe toda a largura em telas pequenas */
+    }
+}
