@@ -7,9 +7,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh; /* Garantir que a altura mínima seja 100% da tela */
     color: #fff;
-    overflow: hidden; /* Evitar rolagem vertical em dispositivos pequenos */
+    overflow-y: auto; /* Permitir rolagem vertical quando necessário */
 }
 
 /* Container principal */
@@ -22,6 +23,7 @@ body {
     border-radius: 10px;
     text-align: center;
     overflow-y: auto;
+    max-height: 100%; /* Impedir que o container ultrapasse a altura da tela */
 }
 
 /* Título */
@@ -34,9 +36,10 @@ h1 {
 /* Logo */
 .logo {
     display: block;
-    margin: 0 auto 20px;
+    margin: 20px auto 20px; /* Adicionando espaçamento superior */
     max-width: 200px;
     height: auto;
+    object-fit: contain; /* Garantir que a imagem seja redimensionada corretamente */
 }
 
 /* Grid de formulário */
@@ -90,7 +93,9 @@ button {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    width: 100%; /* Para garantir que o botão ocupe toda a largura em telas pequenas */
+    width: auto; /* Tamanho normal do botão */
+    max-width: 250px; /* Definindo um tamanho máximo para o botão */
+    margin-top: 20px; /* Adicionando espaço entre o botão e os campos */
 }
 
 /* Botão hover */
@@ -106,7 +111,7 @@ button:hover {
 }
 
 /* Media Queries para dispositivos menores */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     body {
         padding: 10px; /* Reduzindo o padding para otimizar o espaço em telas menores */
     }
@@ -133,5 +138,42 @@ button:hover {
 
     button {
         width: 100%; /* Garantindo que o botão ocupe toda a largura em telas pequenas */
+        max-width: none; /* Removendo o limite de largura */
+        margin-top: 15px; /* Ajustando o espaço superior do botão */
+    }
+
+    /* Logo: ajuste de tamanho */
+    .logo {
+        max-width: 150px; /* Reduzindo o tamanho da imagem */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem; /* Ajuste do tamanho do título */
+    }
+
+    .container {
+        padding: 15px; /* Reduzindo o padding no container para telas muito pequenas */
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr; /* Forçando a coluna única */
+    }
+
+    input, select, textarea {
+        padding: 10px; /* Reduzindo o padding dos campos em telas pequenas */
+        font-size: 0.9rem; /* Reduzindo o tamanho das fontes */
+    }
+
+    button {
+        width: 100%; /* Garantindo que o botão ocupe toda a largura */
+        font-size: 1rem; /* Ajustando o tamanho do botão */
+        padding: 12px 15px; /* Ajustando o padding para telas pequenas */
+    }
+
+    /* Logo: ajuste final */
+    .logo {
+        max-width: 120px; /* A logo ficará ainda menor em telas muito pequenas */
     }
 }
