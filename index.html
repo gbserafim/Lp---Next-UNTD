@@ -6,91 +6,130 @@
   <title>UNTD - Next</title>
   <link rel="icon" type="image/x-icon" href="./img/logo.jpeg">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-  <div class="container">
+<div class="container">
     <img src="./img/logo.jpeg" alt="UNTD - NEXT" class="logo">
     <h1>Compartilhe a sua decisão!</h1>
     <form id="decisionForm">
       <div class="form-grid">
         <div class="form-group">
           <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+          <div class="input-with-icon">
+            <i class="fas fa-user"></i> <!-- Ícone antes do campo -->
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+          </div>
         </div>
         <div class="form-group">
           <label for="decisao">Decisão:</label>
-          <select id="decisao" name="decisao" required>
-            <option value="Salvação">Salvação</option>
-            <option value="Cura">Cura</option>
-            <option value="Reconciliação">Reconciliação</option>
-            <option value="Batismo com o Espírito Santo">Batismo com o Espírito Santo</option>
-            <option value="Oração pela vida">Oração pela vida</option>
-          </select>
+          <div class="input-with-icon">
+            <i class="fas fa-check-circle"></i> <!-- Ícone antes do select -->
+            <select id="decisao" name="decisao" required>
+              <option value="Salvação">Salvação</option>
+              <option value="Cura">Cura</option>
+              <option value="Reconciliação">Reconciliação</option>
+              <option value="Batismo com o Espírito Santo">Batismo com o Espírito Santo</option>
+              <option value="Oração pela vida">Oração pela vida</option>
+            </select>
+          </div>
         </div>
         <div class="form-group">
           <label for="youth">Youth:</label>
-          <select id="youth" name="youth" required>
-            <option value="Sim">Sim</option>
-            <option value="Não">Não</option>
-          </select>
+          <div class="input-with-icon">
+            <i class="fas fa-users"></i> <!-- Ícone antes do select -->
+            <select id="youth" name="youth" required>
+              <option value="Sim">Sim</option>
+              <option value="Não">Não</option>
+            </select>
+          </div>
         </div>
         <div class="form-group">
           <label for="idade">Idade:</label>
-          <input type="number" id="idade" name="idade" placeholder="Sua idade" required>
+          <div class="input-with-icon">
+            <i class="fas fa-calendar-alt"></i> <!-- Ícone antes do campo -->
+            <input type="number" id="idade" name="idade" placeholder="Sua idade" required>
+          </div>
         </div>
         <div class="form-group">
           <label for="batizado">Batizado nas Águas:</label>
-          <select id="batizado" name="batizado" required>
-            <option value="Sim">Sim</option>
-            <option value="Não">Não</option>
-          </select>
+          <div class="input-with-icon">
+            <i class="fas fa-water"></i> <!-- Ícone antes do select -->
+            <select id="batizado" name="batizado" required>
+              <option value="Sim">Sim</option>
+              <option value="Não">Não</option>
+            </select>
+          </div>
         </div>
         <div class="form-group">
           <label for="telefone">Telefone:</label>
-          <input type="text" id="telefone" name="telefone" placeholder="Seu telefone" required>
+          <div class="input-with-icon">
+            <i class="fas fa-phone-alt"></i> <!-- Ícone antes do campo -->
+            <input type="text" id="telefone" name="telefone" placeholder="Seu telefone" required>
+          </div>
         </div>
         <div class="form-group">
           <label for="bairro">Bairro:</label>
-          <input type="text" id="bairro" name="bairro" placeholder="Seu bairro" required>
+          <div class="input-with-icon">
+            <i class="fas fa-map-marker-alt"></i> <!-- Ícone antes do campo -->
+            <input type="text" id="bairro" name="bairro" placeholder="Seu bairro" required>
+          </div>
         </div>
         <div class="form-group">
           <label for="primeiraVez">Primeira vez na Igreja UNITED:</label>
-          <select id="primeiraVez" name="primeiraVez" required>
-            <option value="Sim">Sim</option>
-            <option value="Não">Não</option>
-          </select>
+          <div class="input-with-icon">
+            <i class="fas fa-bible"></i> <!-- Ícone antes do select -->
+            <select id="primeiraVez" name="primeiraVez" required>
+              <option value="Sim">Sim</option>
+              <option value="Não">Não</option>
+            </select>
+          </div>
         </div>
         <div class="form-group">
           <label for="eventos">Eventos:</label>
-          <select id="eventos" name="eventos">
-            <option value="">Nenhum</option>
-            <option value="Acampadentro">Acampadentro</option>
-            <option value="Midweek">Midweek</option>
-            <option value="domingo17h">Culto Domingo - 17h</option>
-            <option value="domingo17h">Culto Domingo - 19h</option>
-            <option value="Destemidas">Destemidas</option>
-            <option value="Destemidas">Kings</option>
-            <option value="Conferência">Conferência</option>
-          </select>
+          <div class="input-with-icon">
+            <i class="fas fa-calendar-week"></i> <!-- Ícone antes do select -->
+            <select id="eventos" name="eventos">
+              <option value="">Nenhum</option>
+              <option value="Acampadentro">Acampadentro</option>
+              <option value="Midweek">Midweek</option>
+              <option value="domingo17h">Culto Domingo - 17h</option>
+              <option value="domingo17h">Culto Domingo - 19h</option>
+              <option value="Destemidas">Destemidas</option>
+              <option value="Destemidas">Kings</option>
+              <option value="Conferência">Conferência</option>
+            </select>
+          </div>
         </div>
         <div class="form-group" id="eventoDetalhesGroup" style="display: none;">
           <label for="eventoDetalhes">Detalhes do Evento:</label>
-          <input type="text" id="eventoDetalhes" name="eventoDetalhes" placeholder="Qual evento foi?">
+          <div class="input-with-icon">
+            <i class="fas fa-info-circle"></i> <!-- Ícone antes do campo -->
+            <input type="text" id="eventoDetalhes" name="eventoDetalhes" placeholder="Qual evento foi?">
+          </div>
         </div>
         <div class="form-group">
           <label for="uGroup">Indicado ao uGroup?</label>
-          <input type="text" id="uGroup" name="uGroup" placeholder="Sim ou Não" required>
+          <div class="input-with-icon">
+            <i class="fas fa-users"></i> <!-- Ícone antes do campo -->
+            <input type="text" id="uGroup" name="uGroup" placeholder="Sim ou Não" required>
+          </div>
         </div>
         <div class="form-group">
           <label for="voluntario">Voluntário:</label>
-          <input type="text" id="voluntario" name="voluntario" placeholder="Nome do voluntário" required>
+          <div class="input-with-icon">
+            <i class="fas fa-handshake"></i> <!-- Ícone antes do campo -->
+            <input type="text" id="voluntario" name="voluntario" placeholder="Nome do voluntário" required>
+          </div>
         </div>
         <div class="form-group">
           <label for="descricao">Descrição (opcional):</label>
-          <textarea id="descricao" name="descricao" placeholder="Conte-nos mais sobre sua decisão"></textarea>
+          <div class="input-with-icon">
+            <i class="fas fa-comment-dots"></i> <!-- Ícone antes do campo -->
+            <textarea id="descricao" name="descricao" placeholder="Conte-nos mais sobre sua decisão"></textarea>
+          </div>
         </div>
       </div>
-      <button type="submit">Enviar</button>
+      <button type="submit"><i class="fas fa-paper-plane"></i> Enviar</button> <!-- Ícone no botão -->
     </form>
     <p id="response" class="response-message"></p>
   </div>
