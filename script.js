@@ -24,6 +24,7 @@ document.getElementById('decisionForm').addEventListener('submit', async functio
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
+        mode:'no-cors',
       });
   
       const result = await response.json();
