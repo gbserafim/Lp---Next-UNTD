@@ -54,7 +54,7 @@
     const descricao = document.getElementById('descricao').value;
 
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbygwJQ6qGx2IiGGkdW0PczPHevfJ7uWqBebqSaqlsZV7Kl_2aYKk3aXIqerts4EHQpN/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbwM3wlHVTTaYuiY7z7kALaj70Rp-FUBYzYq2kLiwqczMDP-xiQZ8z2PVKLFNKuQVomu/exec", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nome, decisao, descricao })
