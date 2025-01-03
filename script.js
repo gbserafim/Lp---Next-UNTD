@@ -24,17 +24,12 @@ document.getElementById('decisionForm').addEventListener('submit', async functio
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
-        mode:'no-cors',
+        mode: 'no-cors',  // Não tenta acessar a resposta
       });
   
-      const result = await response.json();
-  
-      if (result.status === 'success') {
-        document.getElementById('response').textContent = 'Dados enviados com sucesso!';
-        this.reset(); // Limpa o formulário
-      } else {
-        document.getElementById('response').textContent = `Erro: ${result.message}`;
-      }
+      // Não podemos acessar a resposta com no-cors, então o código abaixo seria desnecessário
+      document.getElementById('response').textContent = 'Dados enviados com sucesso!';
+      this.reset(); // Limpa o formulário
     } catch (error) {
       document.getElementById('response').textContent = `Erro ao enviar os dados: ${error.message}`;
     }
