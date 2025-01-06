@@ -163,7 +163,7 @@ button:hover {
   }
   
   .alert-content {
-    background-color: #fff;
+    background-color: #353333;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -174,7 +174,7 @@ button:hover {
   .alert-content button {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #1c1c1c;
     color: white;
     border: none;
     border-radius: 5px;
@@ -182,7 +182,7 @@ button:hover {
   }
   
   .alert-content button:hover {
-    background-color: #0056b3;
+    background-color: #4b4a4a;
   }
   
 
