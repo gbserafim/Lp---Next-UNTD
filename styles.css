@@ -23,7 +23,7 @@ body {
     border-radius: 10px;
     text-align: center;
     overflow-y: auto;
-    max-height: 100%; /* Impedir que o container ultrapasse a altura da tela */
+    max-height: 100%; 
 }
 
 /* Título */
@@ -148,8 +148,8 @@ button:hover {
     }
 }
 
- /* modal alert */
- .alert-modal {
+/* modal alert */
+.alert-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -170,13 +170,17 @@ button:hover {
     text-align: center;
     max-width: 400px;
     display: flex;
-    flex-direction: column; /* Define o layout como coluna */
-    justify-content: space-between; /* Espaça os elementos */
-    min-height: 150px; /* Garante um espaço mínimo para o conteúdo */
+    flex-direction: column; 
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    min-height: 150px; 
+}
+
+.alert-content p {
+    margin-bottom: 20px; /* Espaçamento entre a mensagem e o botão */
 }
 
 .alert-content button {
-    margin-top: auto; /* Empurra o botão para o final */
     padding: 10px 20px;
     background-color: #1c1c1c;
     color: white;
@@ -188,6 +192,7 @@ button:hover {
 .alert-content button:hover {
     background-color: #4b4a4a;
 }
+
   
 
 /* Estilo para ícones */
