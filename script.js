@@ -14,6 +14,7 @@ document.getElementById('decisionForm').addEventListener('submit', async functio
     eventoDetalhes: document.getElementById('eventoDetalhes').value || "",
     uGroup: document.getElementById('uGroup').value,
     voluntario: document.getElementById('voluntario').value,
+    liderVoluntario: document.getElementById('liderVoluntario').value,
     descricao: document.getElementById('descricao').value || "",
   };
 
